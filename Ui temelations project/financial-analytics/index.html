@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ledgerline – Stock Analytics</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">Ledgerline</div>
+
+      <form class="search-form" id="searchForm" autocomplete="off">
+        <input id="search" type="search" placeholder="Search a company or symbol, e.g. Reliance, TCS, Apple" aria-label="Search company">
+        <button class="btn solid" type="submit">Search</button>
+        <ul class="suggest" id="suggest" hidden></ul>
+      </form>
+
+      <div class="mode">
+        <span class="badge" id="modeBadge">Demo data</span>
+        <button class="btn" id="keyBtn" type="button">Live data</button>
+      </div>
+    </header>
+
+    <div class="key-panel" id="keyPanel" hidden>
+      <p>
+        To search any listed company with real prices, paste a free
+        <a href="https://www.alphavantage.co/support/#api-key" target="_blank" rel="noopener">Alpha Vantage API key</a>.
+        The key is stored only in this browser.
+      </p>
+      <input id="keyInput" type="text" placeholder="Alpha Vantage API key" aria-label="API key">
+      <button class="btn solid" id="keySave" type="button">Save key</button>
+      <button class="btn" id="keyClear" type="button">Use demo data</button>
+    </div>
+
+    <p class="message" id="message" role="status"></p>
+
+    <main class="layout">
+      <section class="panel detail" id="detail" aria-live="polite"></section>
+
+      <aside class="side">
+        <section class="panel">
+          <h2>Watchlist</h2>
+          <div id="watchlist"></div>
+        </section>
+        <section class="panel">
+          <h2>Biggest gainers today</h2>
+          <div id="gainers"></div>
+        </section>
+        <section class="panel">
+          <h2>Biggest losers today</h2>
+          <div id="losers"></div>
+        </section>
+      </aside>
+    </main>
+
+    <p class="foot">
+      Demo prices are simulated for this template and are not real market data. This is not financial advice.
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beacon – Student AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <h1>Beacon</h1>
+        <p class="sub">Attendance, marks, weak subjects and a study plan for one student.</p>
+      </div>
+
+      <div class="controls">
+        <label>Student
+          <select id="student">
+            <option value="aarav">Aarav</option>
+            <option value="divya">Divya</option>
+            <option value="karthik">Karthik</option>
+            <option value="custom">My own data</option>
+          </select>
+        </label>
+        <label>Study hours per week
+          <input id="hours" type="number" min="1" max="80" value="20">
+        </label>
+        <label>Target score
+          <input id="target" type="number" min="40" max="100" value="75">
+        </label>
+      </div>
+    </header>
+
+    <main class="page">
+      <div id="alerts"></div>
+      <section class="kpis" id="kpis" aria-label="Summary"></section>
+
+      <details class="panel" id="editor" open>
+        <summary>Enter or edit marks and attendance</summary>
+        <p class="note">Marks are out of 100 for four tests. Everything below updates as you type.</p>
+        <div class="table-scroll">
+          <table class="edit">
+            <thead>
+              <tr>
+                <th>Subject</th><th>Classes attended</th><th>Total classes</th>
+                <th>Test 1</th><th>Test 2</th><th>Test 3</th><th>Test 4</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="editRows"></tbody>
+          </table>
+        </div>
+        <button class="btn" id="addSubject" type="button">Add subject</button>
+      </details>
+
+      <div class="two-col">
+        <section class="panel">
+          <h2>Marks by subject</h2>
+          <svg class="chart" id="marksChart" viewBox="0 0 640 260" role="img" aria-label="Marks by subject"></svg>
+          <p class="legend"><i class="k teal"></i>Average so far <i class="k amber"></i>Predicted final <i class="k dash"></i>Target</p>
+        </section>
+        <section class="panel">
+          <h2>Attendance by subject</h2>
+          <svg class="chart" id="attChart" viewBox="0 0 640 260" role="img" aria-label="Attendance by subject"></svg>
+          <p class="legend"><i class="k dash"></i>75% minimum</p>
+        </section>
+      </div>
+
+      <section class="panel">
+        <h2>Subject-wise results and AI prediction</h2>
+        <div class="table-scroll" id="predTable"></div>
+        <p class="note">Prediction blends the trend of the test marks with the latest marks, and lowers the result when attendance is under 75%. It is an estimate, not a guarantee.</p>
+      </section>
+
+      <div class="two-col">
+        <section class="panel">
+          <h2>Suggested study hours</h2>
+          <div id="plan"></div>
+        </section>
+        <section class="panel">
+          <h2>Suggestions</h2>
+          <ul class="tips" id="tips"></ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <h2>Notes and resources to refer</h2>
+        <div class="notes" id="notes"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Ask the AI</h2>
+        <form class="ask-form" id="askForm">
+          <input id="askInput" type="text" placeholder="Try: which subject is weak?" aria-label="Ask a question">
+          <button class="primary" type="submit">Ask</button>
+        </form>
+        <div class="examples" id="examples"></div>
+        <div class="answer" id="answer"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

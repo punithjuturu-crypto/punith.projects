@@ -1,0 +1,77 @@
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--bd);
+}
+
+.nav b {
+  margin-right: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--tx);
+}
+
+.nav a:hover {
+  color: var(--ac);
+}
+
+.hero {
+  background: linear-gradient(135deg, #3b5bdb, #5f3dc4);
+  color: #fff;
+  padding: 36px 20px 52px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+}
+
+.hero p {
+  margin: 0 auto 18px;
+  max-width: 560px;
+  opacity: 0.9;
+}
+
+.search {
+  max-width: 520px;
+  margin: auto;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: -34px 0 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--mut);
+  font-size: 0.82rem;
+  padding: 20px;
+}

@@ -1,0 +1,161 @@
+/* ---------- Forms ---------- */
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--bd);
+  background: var(--card);
+  color: var(--tx);
+  font: inherit;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+  color: var(--mut);
+}
+
+/* ---------- Buttons ---------- */
+button,
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ac);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.ghost {
+  margin-left: 6px;
+  background: transparent;
+  color: var(--ac);
+  border: 1px solid var(--bd);
+}
+
+/* ---------- Stats and panels ---------- */
+.stat {
+  flex: 1 1 140px;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat b {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.stat span {
+  color: var(--mut);
+  font-size: 0.85rem;
+}
+
+.panel {
+  margin-bottom: 18px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+/* ---------- Category chips ---------- */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.chip {
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid var(--bd);
+  border-radius: 99px;
+  background: var(--card);
+  color: var(--tx);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.chip.on {
+  background: var(--ac);
+  color: #fff;
+  border-color: var(--ac);
+}
+
+/* ---------- Scheme cards ---------- */
+.card {
+  display: block;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  color: var(--tx);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--ac);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  color: var(--mut);
+}
+
+.meta {
+  color: var(--mut);
+  font-size: 0.82rem;
+}
+
+/* ---------- Result badges ---------- */
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 9px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.yes {
+  background: var(--okb);
+  color: var(--ok);
+}
+
+.maybe {
+  background: var(--mbb);
+  color: var(--mb);
+}
+
+.no {
+  background: var(--nob);
+  color: var(--no);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  padding: 20px;
+  text-align: center;
+  color: var(--mut);
+}

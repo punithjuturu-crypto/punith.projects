@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wren – AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">Wren</div>
+      <button class="new-chat" id="newChat">New chat</button>
+      <h2 class="side-title">Recent chats</h2>
+      <ul class="history" id="history"></ul>
+    </aside>
+
+    <div class="chat">
+      <header class="chat-head">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle chat list">Chats</button>
+        <span class="chat-title" id="chatTitle">New chat</span>
+
+        <label class="tool">
+          Voice language
+          <select id="lang">
+            <option value="en-IN">English</option>
+            <option value="ta-IN">தமிழ்</option>
+            <option value="hi-IN">हिन्दी</option>
+          </select>
+        </label>
+        <label class="tool check">
+          <input type="checkbox" id="speakToggle"> Read replies aloud
+        </label>
+        <button class="tool-btn" id="settingsBtn" type="button">AI settings</button>
+      </header>
+
+      <div class="settings" id="settings" hidden>
+        <p>
+          Without a key, Wren answers maths, time, jokes, drafts and general questions using Wikipedia.
+          For full AI answers to anything, paste an Anthropic API key. It stays in this browser only.
+        </p>
+        <input id="keyInput" type="password" placeholder="Anthropic API key" aria-label="API key">
+        <button class="send" id="keySave" type="button">Save</button>
+        <button class="tool-btn" id="keyClear" type="button">Remove key</button>
+        <span id="keyStatus"></span>
+      </div>
+
+      <div class="scroll" id="scroll">
+        <section class="empty" id="empty">
+          <h1> welcome to punith site What can I help you?</h1>
+          <p>Type a question, or tap the microphone and speak.</p>
+          <div class="suggestions" id="suggestions"></div>
+        </section>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </div>
+
+      <form class="composer" id="composer">
+        <button class="mic" id="mic" type="button" aria-label="Speak your message" aria-pressed="false">Mic</button>
+        <textarea id="prompt" rows="1" placeholder="Message Wren…" aria-label="Message"></textarea>
+        <button class="send" id="send" type="submit">Send</button>
+      </form>
+      <p class="hint" id="hint">Enter to send, Shift + Enter for a new line.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

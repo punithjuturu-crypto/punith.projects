@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check eligibility</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+  </head>
+  <body data-page="eligibility">
+    <div class="nav">
+      <b>Scheme Help Centre</b>
+      <a href="index.html">Schemes</a>
+      <a href="eligibility.html">Check eligibility</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="wrap">
+      <div class="panel">
+        <h2>Check my eligibility</h2>
+
+        <div class="form">
+          <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="0" max="110" placeholder="e.g. 30">
+          </div>
+
+          <div>
+            <label for="gen">Gender</label>
+            <select id="gen">
+              <option value="">Select</option>
+              <option value="f">Female</option>
+              <option value="m">Male</option>
+              <option value="o">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="st">State</label>
+            <select id="st">
+              <option value="tn">Tamil Nadu</option>
+              <option value="ot">Other state</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="inc">Family income / year (₹)</label>
+            <input id="inc" type="number" min="0" placeholder="e.g. 200000">
+          </div>
+
+          <div>
+            <label for="job">Occupation</label>
+            <select id="job">
+              <option value="">Select</option>
+              <option value="farmer">Farmer</option>
+              <option value="student">Student</option>
+              <option value="self">Self-employed / business</option>
+              <option value="sal">Salaried</option>
+              <option value="home">Homemaker</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="house">Own a pucca house?</label>
+            <select id="house">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="go">Check schemes</button>
+        <button class="ghost" id="reset">Reset</button>
+        <div id="summary"></div>
+      </div>
+
+      <div class="grid" id="list"></div>
+    </div>
+
+    <div class="footer">
+      Information is indicative and simplified. Confirm on the official site or myscheme.gov.in before applying.
+    </div>
+
+    <script src="data/schemes.js"></script>
+    <script src="data/rules.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/eligibility.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
